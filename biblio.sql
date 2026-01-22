@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 22 jan. 2026 à 20:35
+-- Généré le : jeu. 22 jan. 2026 à 21:57
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `emprunts` (
 --
 
 INSERT INTO `emprunts` (`id_emprunt`, `membre_id`, `livre_id`, `date_debut`, `date_fin`) VALUES
-(1, 2, 2, '2026-01-22', '2026-02-05');
+(5, 3, 3, '2026-01-22', '2026-02-05');
 
 -- --------------------------------------------------------
 
@@ -62,8 +62,9 @@ CREATE TABLE `livres` (
 
 INSERT INTO `livres` (`id_livre`, `titre_livre`, `description_livre`, `auteur_livre`, `etat_livre`) VALUES
 (1, 'Le Petit prince', 'histoire pour enfant', 'Leonard', 'libre'),
-(2, 'La Peste', 'maladie', 'kaka', 'emprunte'),
-(3, 'Le poisson rouge', 'trondro', 'bla bla', 'libre');
+(2, 'La Peste', 'maladie', 'kaka', 'libre'),
+(3, 'Le poisson rouge', 'trondro', 'bla bla', 'emprunte'),
+(6, 'poi', 'ss', 'kk', 'libre');
 
 -- --------------------------------------------------------
 
@@ -76,6 +77,7 @@ CREATE TABLE `membre` (
   `nom_membre` text NOT NULL,
   `prenom_membre` text NOT NULL,
   `email_membre` text NOT NULL,
+  `role` enum('admin','membre') NOT NULL,
   `mdp_membre` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -83,10 +85,10 @@ CREATE TABLE `membre` (
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`id_membre`, `nom_membre`, `prenom_membre`, `email_membre`, `mdp_membre`) VALUES
-(1, 'Nadia', 'Finaritra', 'finaritra@gmail.com', 'fina'),
-(2, 'Zara', 'Fanilo', 'zara@gmail.com', 'zara'),
-(3, 'Fanilo', 'Mendrika', 'mendrika@gmail.com', 'mendrika');
+INSERT INTO `membre` (`id_membre`, `nom_membre`, `prenom_membre`, `email_membre`, `role`, `mdp_membre`) VALUES
+(1, 'Nadia', 'Finaritra', 'finaritra@gmail.com', 'membre', 'fina'),
+(2, 'Zara', 'Fanilo', 'zara@gmail.com', 'membre', 'zara'),
+(3, 'Fanilo', 'Mendrika', 'mendrika@gmail.com', 'admin', 'mendrika');
 
 --
 -- Index pour les tables déchargées
@@ -120,13 +122,13 @@ ALTER TABLE `membre`
 -- AUTO_INCREMENT pour la table `emprunts`
 --
 ALTER TABLE `emprunts`
-  MODIFY `id_emprunt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_emprunt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `livres`
 --
 ALTER TABLE `livres`
-  MODIFY `id_livre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_livre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `membre`

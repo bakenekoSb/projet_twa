@@ -23,10 +23,18 @@
                         if ($membre) {
                             $_SESSION['id_membre'] = $membre['id_membre'];
                             $_SESSION['nom_membre'] = $membre['nom_membre'];
+                            $_SESSION['role'] = $membre['role'];
+                            if ($_SESSION['role'] === 'membre'){
                             echo "<script>
+                                    alert('Connexion réussie $_SESSION[nom_membre]');
+                                    window.location.href = './../accueil.php';
+                                    </script>";
+                            } else {
+                                echo "<script>
                                 alert('Connexion réussie $_SESSION[nom_membre]');
-                                window.location.href = './../accueil.php';
+                                window.location.href = './../livre/admin.php';
                               </script>";
+                            }
                         }else {
                             echo "<script>
                                 alert('information incompatible, inscrivez vous');
