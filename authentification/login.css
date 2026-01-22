@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f3ee;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><defs><pattern id="books" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse"><rect width="400" height="400" fill="%23FAF7F2"/><g opacity="0.06"><g transform="translate(50, 60) rotate(-15)"><rect width="35" height="120" fill="%235C4A3D" rx="3"/><rect width="33" height="118" x="1" y="1" fill="%23B8956F" rx="2"/><line x1="2" y1="30" x2="34" y2="30" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(150, 120) rotate(8)"><rect width="32" height="100" fill="%238B6F47" rx="3"/><rect width="30" height="98" x="1" y="1" fill="%23A67C52" rx="2"/><line x1="2" y1="25" x2="32" y2="25" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(280, 80) rotate(-22)"><rect width="38" height="110" fill="%23C85A3A" rx="3"/><rect width="36" height="108" x="1" y="1" fill="%23E8957F" rx="2"/><line x1="2" y1="35" x2="36" y2="35" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(100, 240) rotate(12)"><rect width="34" height="105" fill="%235C4A3D" rx="3"/><rect width="32" height="103" x="1" y="1" fill="%23B8956F" rx="2"/><line x1="2" y1="28" x2="32" y2="28" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(320, 200) rotate(-18)"><rect width="30" height="95" fill="%238B6F47" rx="3"/><rect width="28" height="93" x="1" y="1" fill="%23A67C52" rx="2"/><line x1="2" y1="22" x2="28" y2="22" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(200, 300) rotate(5)"><rect width="36" height="115" fill="%23B8956F" rx="3"/><rect width="34" height="113" x="1" y="1" fill="%238B6F47" rx="2"/><line x1="2" y1="32" x2="34" y2="32" stroke="%23D4C5B9" stroke-width="1"/></g><g transform="translate(60, 320) rotate(-8)"><rect width="32" height="100" fill="%23C85A3A" rx="3"/><rect width="30" height="98" x="1" y="1" fill="%23E8957F" rx="2"/><line x1="2" y1="25" x2="30" y2="25" stroke="%23D4C5B9" stroke-width="1"/></g><circle cx="250" cy="160" r="6" fill="%23B8956F" opacity="0.5"/><circle cx="80" cy="140" r="5" fill="%238B6F47" opacity="0.4"/><circle cx="350" cy="320" r="4" fill="%23C85A3A" opacity="0.5"/><path d="M 20 100 Q 25 120 20 140" stroke="%23A67C52" stroke-width="2" fill="none" opacity="0.4"/><path d="M 370 240 Q 375 260 370 280" stroke="%238B6F47" stroke-width="1.5" fill="none" opacity="0.3"/></g></pattern></defs><rect width="400" height="400" fill="url(%23books)"/></svg>');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carte */
+.auth-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Titre */
+.auth-container h1 {
+    text-align: center;
+    color: #8b5e3c;
+    margin-bottom: 20px;
+}
+
+/* Lien */
+.auth-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c8a97e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Labels */
+.auth-form label {
+    font-weight: 600;
+    color: #5c4033;
+}
+
+/* Inputs */
+.auth-form input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d8c3a5;
+    font-size: 15px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #8b5e3c;
+    box-shadow: 0 0 0 2px rgba(139, 94, 60, 0.2);
+}
+
+/* Bouton */
+.auth-form button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #8b5e3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.auth-form button:hover {
+    background: #6f4a2f;
+}
+
+.auth-form button:active {
+    transform: scale(0.97);
+}
